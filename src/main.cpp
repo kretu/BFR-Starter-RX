@@ -75,7 +75,7 @@ void initEspNow() {
     Serial.print("recv_cb, msg from device: "); 
     Serial.println(macStr);
 
-      if(messageData.Sender==101) {
+      if(messageData.Sender==201) {
         Serial.print("Nadajnik do RX1: ");
         Serial.println(messageData.IGN_FIRE);
         IGN_FIRE=messageData.IGN_FIRE;
@@ -86,7 +86,7 @@ void initEspNow() {
         Serial.print(messageData.IGN_Status);
         Serial.print(messageData.IGN_FIRE);
       }
-      if(!(messageData.Sender==101) && !(messageData.Sender==100)) {
+      if(!(messageData.Sender==201) && !(messageData.Sender==100)) {
         Serial.print("Niepoprawny nadawca ");
         Serial.println(messageData.Sender);
       }
